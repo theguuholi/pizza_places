@@ -17,6 +17,7 @@ defmodule PizzaPlacesWeb.Router do
   scope "/", PizzaPlacesWeb do
     pipe_through :browser
 
+    live "/map", MapLive, :index
     get "/", PageController, :index
   end
 
